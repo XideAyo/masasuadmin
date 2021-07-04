@@ -1,0 +1,131 @@
+:root {
+  --primary:#00B7FF;
+  --secondary: rgb(240, 158, 8); 
+}
+body {
+  font-size : 16px;
+  font-family: Larsseit-Bold,sans-serif;letter-spacing: 0.2px;
+  color: #222;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+a{
+  font-size: 15px;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+li{list-style: none;}ul {padding: 0;}
+.m-lr-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+.jumbotron {
+  padding: 50px 50px 30px 50px;
+  background: #00B7FF;
+}
+.jumbotron2{
+  padding: 50px 50px 30px 50px;
+  background: rgb(1, 1, 78);
+}
+.fw-600{
+  font-weight: 500
+}
+.white-text{
+  color: #fff
+}
+.ord-md-1{
+  order: 2;
+}
+.ord-md-2 {
+  order: 1;
+}
+input , textarea {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-size: 13px;letter-spacing: 0.5px;
+}
+fieldset{
+  border-bottom: 1px solid #222;
+  padding-bottom :5px;
+}
+input::placeholder {
+  font-size: 13px;letter-spacing: 0.5px;
+  padding: 2px;
+}
+input.btn {
+  background: var(--secondary);
+  padding: .385rem .95rem;
+  border-radius: .15rem;
+}
+.fixed{
+  position: fixed
+}
+.logo{
+  height: 3em;
+  width: 8em;
+  padding-bottom: .1rem;
+  margin-right: 1rem;
+}
+nav li.nav {
+  padding: 5px 10px;
+}
+.hide-md {
+  display: block;
+}
+.show-md {
+  display: none;
+}
+.nav-2 {
+  display: block;
+  border-bottom: 1px solid #777;
+  padding:  15px 15px 15px 10px;
+}
+.org-btn {
+  background: var(--secondary);
+  border-radius: 0;
+  padding: 15px 0px;
+}
+.blue-btn {
+  background: var(--primary);
+  border-radius: 0;
+  padding: 15px 0px;
+}
+header {
+  border-bottom: 1.5px solid #222;
+}
+.image{
+  width:  150px;
+  height:120px
+}
+.border{
+  border: 1px solid #222;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.5), inset 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .ord-md-1{
+    order: 1;
+  }
+  .ord-md-2 {
+    order: 2;
+  }
+  .hide-md {
+    display: none;
+  }
+  .show-md {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .jumbotron , .jumbotron2 {
+    padding: 20px;
+  }
+}

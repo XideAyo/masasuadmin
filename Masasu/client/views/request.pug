@@ -1,0 +1,41 @@
+include components/head.pug
+block content
+    body
+        include components/Header.pug
+        section.mt-5
+            .container
+                .row.justify-content-center
+                    .col-md-8.pb-5
+                        h2.text-center.pb-2 Let us help you find your dream car
+                        p.text-center You want to find your dream car?, Reach out to us
+                    .col-md-8
+                        form(action="post").form-box.mb-5
+                            div
+                                h4 Name
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type="text" class="" placeholder="First Name" name="firstname" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="text" class="" placeholder="Surname" name="surname" required)]
+                            div
+                                h4 Contact
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="email" class="" placeholder="Email" name="email" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="tel" class="" placeholder="Phone No(optional)" name="telephone" optional)]
+                                    .col-sm-12
+                                        fieldset.mb-4 #[input(type ="text" class="" placeholder="Address" name="address" optional)]
+                            .mb-4
+                                h4.pb-3 Vehicle Model
+                                    .row
+                                        .col-sm-6
+                                            fieldset.mb-4 #[input(type ="text" class="" placeholder="Vehicle Model" name="model" required)]
+                                        .col-sm-6
+                                            fieldset.mb-4 #[input(type ="text" class="" placeholder="Body Type" name="bodytype" )]
+                                        .col-sm-6
+                                            fieldset.mb-4 #[input(type ="text" class="" placeholder="Status" name="status" )]
+                                        .col-sm-6
+                                            fieldset.mb-4 #[input(type ="number" class="" placeholder="Year" name="year" )]
+                            div.text-center
+                                input(type="submit" class="btn" value="Submit")

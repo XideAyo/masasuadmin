@@ -1,0 +1,29 @@
+include components/head.pug
+block content
+    body
+        include components/Header.pug
+        section
+            .big-jumbotron
+                .container.zindex-1000
+                    h2.text-center.pt-5.pb-5.mb-5 Masasu Autos
+                    .row.justify-content-center
+                        a(href="mailto:info@masasuautosltd.com") info@masasuautosltd.com
+        section.hero-text.pb-3.pt-3
+            .container2
+                .row.justify-content-center
+                    .col-md-5  #[img(src="/images/smiling man.jpg" ,  alt="",class='img-fluid')]
+                    .col-md-6
+                        h2 Why Masasu Autos Limited is the No.1 choice for you
+                        p We at Masasu Autos Limited, pride ourselves with excellence in the sales and distribution of automobiles, Our Mission is to earn our customer’s loyalty by delivering sales and services experiences with high quality, excellent value, trust, integrity and enthusiasm.
+                        p You want to know more about us? 
+                        .text-center
+                            h3.text-center.pt-3 #[a(href=`/about`  class="btn org-btn mb-3") About Us]   
+        section.bg-request
+            .container
+                .text-center 
+                    h2 Having troubles finding your dream car?
+                    p LET US HELP YOU FIND IT
+                    .text-center
+                        h3.text-center.pt-3 #[a(href=`/request`  class="btn org-btn mb-3") CLICK ME!]       
+        include components/footer.pug
+        include components/script.pug        

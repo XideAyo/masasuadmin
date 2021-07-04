@@ -1,0 +1,23 @@
+block content
+    footer
+        .container
+            .footer-block.relative
+                h4 Manufacturer
+                ul
+                    each item in cars.manufacturer
+                        li #[a(href="") #{item}]
+            .footer-block.relative
+                h4 Body Type
+                ul
+                    each item in cars.Body_Type
+                        li #[a(href="") #{item}]
+            .footer-block.relative
+                h4 Status
+                ul
+                    each item in cars.status
+                        li #[a(href="") #{item}]
+            .footer-block.relative
+                h4 Year
+                ul
+                    each item in cars.year
+                        li #[a(href="") #{item}]

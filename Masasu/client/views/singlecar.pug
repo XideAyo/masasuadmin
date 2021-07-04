@@ -1,0 +1,37 @@
+include components/head.pug
+block content
+    body
+        include components/Header.pug
+        section
+            .container
+                .row.j-c-s.pt-5.pb-5
+                    .col-md-6
+                        .row
+                            div #[img(src=car.carImage)]
+                            div.ml-2
+                                .single-car-text
+                                    p #[b Manufacturer: ]#[span #{car.manufacturer}]                              
+                                    p #[b Model: ]#[span #{car.model}]                         
+                                    p #[b Status: ]#[span #{car.status}]                              
+                                    p #[b Body Type: ]#[span #{car.bodytype}]
+                    .col-md-6
+                        h3 Interested in this car?, Contact us
+                        form(action="post").form-box.mb-5
+                            div
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type="text" class="w-100" placeholder="First Name" name="firstname" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="text" class="w-100" placeholder="Last Name" name="lastname" optional)]
+                            .mb-4
+                                h4 Contact
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="email" class="w-100" placeholder="Email" name="email" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="tel" class="w-100" placeholder="Phone No(optional)" name="telephone" optional)]
+                            div
+                                input(type="submit" class="btn" value="Submit")
+                                          
+        include components/footer.pug
+        include components/script.pug

@@ -1,0 +1,27 @@
+include components/head.pug
+block content
+    body
+        .container
+            .card-body
+                h1.text-center.pb-4 EDIT YOUR CAR
+                .row.justify-content-center
+                    div(class="col-md-6")
+                        div(class="card")
+                            div(class="card-header")
+                                h5(class="title") Edit this car
+                            div(class="card-body")
+                                form(method='POST' class='form-field' enctype='multipart/form-data')          
+                                    label MANUFACTURER
+                                    input(type="text", name="manufacturer", class='form-control mb3 text-center' value=car.manufacturer.toUpperCase() required)
+                                    label MODEL
+                                    input(type="text", name="model", class='form-control mb3 text-center' value=car.model.toUpperCase() required)
+                                    label STATUS
+                                    select(name="status", class='form-control mb-3 custom-select')
+                                        option(value='new') NEW
+                                        option(value='foreign used') FOREIGN USED
+                                    label BODYTYPE
+                                    input(type="text", name="mobile", class='form-control mb3 text-center' value=car.bodytype required)
+                                    label(class='btn btn-file' id="picture") #[i(class='tim-icons icon-upload')] Select Image
+                                        input(type='file', name='image' class='m-l-auto')
+                                    .text-center
+                                        input(type='submit' class='main-btn mb-3 org-btn' value='Edit')

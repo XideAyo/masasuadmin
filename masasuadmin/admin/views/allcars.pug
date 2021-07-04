@@ -1,0 +1,36 @@
+include components/head.pug
+block content
+    body
+        .container
+            .card-body
+                h1.text-center.pb-4 ALL CARS
+                .row.justify-content-center
+                    .col-md-10
+                        if cars.length > 0
+                            div(class="table-responsive form-field")
+                                table(class="table table-bordered" id="dataTable")
+                                    thead
+                                        th Manufacturer
+                                        th Model 
+                                        th BodyType 
+                                        th Status
+                                        th Car Image
+                                        th Actions
+                                    tbody
+                                        each car in cars
+                                            -let deleteUrl = `/cars/${car._id}/delete?`
+                                            -let editUrl = `/cars/${car._id}`
+                                            -let imageUrl = `${car.carImage}`
+                                            tr
+                                                td #{car.manufacturer.toUpperCase()}
+                                                td #{car.model.toUpperCase()}
+                                                td #{car.bodytype}
+                                                td #{car.status.toUpperCase()}
+                                                td #[img(class="avatar border-gray image" src=imageUrl id='imageU')]
+                                                td.text-center #[a(href=`${editUrl}`  class="btn btn-info mb-3") Edit] #[a(href=`${deleteUrl}` class='btn btn-danger') Delete]
+                        else
+                            h2.text-center No Car has been created
+                            h3.text-center.pt-3 #[a(href=`/`  class="btn btn-info mb-3") Create Cars]
+                h3.text-center.pt-3 #[a(href=`/`  class="btn btn-info mb-3") Create Cars]
+
+    include components/footer.pug

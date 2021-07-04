@@ -1,0 +1,41 @@
+include components/head.pug
+block content
+    body
+        section 
+            .container 
+                h2.text-center Create, Edit and Delete Cars from Database
+        section 
+            .container 
+                h3.text-center.pt-3 #[a(href=`/allcars`  class="btn btn-info mb-3") View all Cars]
+                h1.text-center.pb-5 Create Cars 
+                .row.justify-content-center
+                    .col-md-6.border
+                        form(method='POST' class='form-field' enctype='multipart/form-data' action='/uploadimage')          
+                            label.pb-3.text-center MANUFACTURER
+                            input(type="text", name="manufacturer", class='form-control mb-3' required)
+                            label.pb-3 MODEL
+                            input(type="text", name="model", class='form-control mb-3' required)
+                            label.pb-3 STATUS 
+                            select(name="status", class='form-control mb-3 custom-select pb-3')
+                                option(value="new" disabled selected) --select your option--
+                                option(value="new") New
+                                option(value="used") Foreign Used
+                            label.pb-3 BODY-TYPE
+                            select(name="bodytype", class='form-control mb-3 custom-select pb-3')
+                                option(value="new" disabled selected) --select your option--
+                                option(value="hatchback") Hatchback
+                                option(value="sedan") Sedan 
+                                option(value="muv/suv") MUV/SUV
+                                option(value="van") Van
+                            label(class='btn btn-file' id="picture") #[i(class='tim-icons icon-upload')] Select Image
+                                input(type='file', name='image', id='picture', class='m-l-auto')
+                            .text-center
+                                input(type='submit' class='btn mb-3' value='Create')
+
+                
+        script(src='/javascripts/handleImage.js')   
+
+                
+    
+
+

@@ -1,0 +1,20 @@
+include components/head.pug
+block content
+    body
+        include components/Header.pug
+        .container
+            section.cars
+                h2.text-center.pt-5 USED CARS
+                .row.justify-content-center.pb-5
+                    each car in usedCars
+                        .col-md-5
+                            a(href=`/car/${car.id}`).cars-card.shadow
+                                .cars-image #[img(src=car.carImage)]
+                                .cars-text.pb-2
+                                    p.text-center.pt-2 #[b Manufacturer: ]#[span #{car.manufacturer.toUpperCase()}]                              
+                                    p.text-center #[b Model: ]#[span #{car.model.toUpperCase()}]                         
+                                    p.text-center #[b Status: ]#[span #{car.status.toUpperCase()}]                              
+                                    p.text-center #[b Body Type: ]#[span #{car.bodytype}]                           
+
+        include components/footer.pug
+        include components/script.pug

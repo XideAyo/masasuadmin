@@ -1,0 +1,63 @@
+include components/head.pug
+block content
+    body
+        include components/Header.pug
+        
+        section.jumbotron2.text-center.white-text
+            .container.z-index-100
+                .row.justify-content-center
+                    .col-md-8
+                       h2.mb-3 GET IN TOUCH
+                .row
+                    .col-md-4
+                        i.fa.fa-compass
+                        h4.pb-2.fw-600 ADDRESS
+                        p 154 Awolowo Way, Ikeja, Lagos
+                    .col-md-4
+                        i.fa.fa-envelope
+                        h4.pb-2.fw-600 EMAIL
+                        .mb-3
+                            p.white-text General E-mail
+                            p #[a(href="mailto:masasuautos@gmail.com") masasuautos@gmail.com]
+                        .mb-3
+                            p.white-text Request for Sales
+                            p #[a(href="mailto:sales@masasuautosltd.com") sales@masasuautosltd.com]
+                        .mb-3
+                            p.white-text Request for Information
+                            p #[a(href="mailto:info@masasuautosltd.com") info@masasuautosltd.com]
+                    .col-md-4
+                        i.fa.fa-phone
+                        h4.pb-2.fw-600 PHONE
+                        p.white-text Masasu Autos Limited
+                        p #[a(href="tel:+2349085764622") +2349085764622]
+                        p #[a(href="tel:+2348038438134") +2348038438134]
+        section.mt-5
+            .container
+                .row
+                    .col-md-6
+                        h2.fs-27 Message Us
+                        p If you wish to make enquires about our services or you have suggestions, complaints and compliments. Fill free to contact us and we would respond as fast as the speed of light
+                    .col-md-6
+                        form(action="post").form-box.mb-5
+                            div
+                                h4 Name
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type="text" class="w-100" placeholder="First Name" name="firstname" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="text" class="w-100" placeholder="Surname" name="surname" required)]
+                            div
+                                h4 Contact
+                                .row
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="email" class="w-100" placeholder="Email" name="email" required)]
+                                    .col-sm-6
+                                        fieldset.mb-4 #[input(type ="tel" class="w-100" placeholder="Phone No(optional)" name="telephone" optional)]
+                            .mb-4
+                                h4 Message
+                                fieldset #[textarea(name="message", cols="30", rows="3" class="w-100" placeholder="Your Message..." required)]
+                            div
+                                input(type="submit" class="btn" value="Submit")
+        include components/footer.pug        
+        include components/script.pug        
+
